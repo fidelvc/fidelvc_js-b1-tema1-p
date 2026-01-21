@@ -31,9 +31,15 @@ for(let i=0; i<10;i++){
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function fibonacci(num){
+	if(num < 2){
+		return num;
+	}else {
+		return fibonacci(num -1) + fibonacci(num -2);
+	}
+};
 
-
-
+//console.log(fibonacci(9))
 /**
  * TEST
  * The purpose of this code is purely for TESTING PURPOSES, 
