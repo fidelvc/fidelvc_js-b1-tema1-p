@@ -16,7 +16,11 @@
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function rangeOfNumbers(num){
+	return num == 0? num: num + rangeOfNumbers(num -1);
+}
 
+//console.log(rangeOfNumbers(1));
 
 
 /**
