@@ -5,7 +5,7 @@
 	EJERCICIO 1.2.3 ENUNCIADO:
 	Define el cuerpo de una función recursiva denominada [oddNumbers] que recibiba un número y un Array vacío como parámetro y rellene este Array 
 	recibido como parámetro con todos los números impares que hay entre cero y el número recibido (con este incluido) como parámetro. 
-	Por ejemplo siendo myArray un Array vacío, la llamada a la función oddNumbers(7, myArray) devolvería myArray con los valores [7, 5, 3, 1] 
+	Por ejemplo siendo myArray un Array vacío, la llamada a la función oddNumbers(7, myArray) devolvería myArray con los valores [7kz, 5, 3, 1] 
 	-- CATALÀ --
 	EXERCICI 1.2.3 ENUNCIAT:
 	Defineix el cos d'una funció recursiva anomenada [oddNumbers] que rebi un nombre i un Array buit com a paràmetre i empleni aquest Array
@@ -18,6 +18,17 @@ oddNumbers(7, myArray);
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function oddNumbers(num, arr){
+	
+	if( num <= 0) return arr;
+	
+	if (num % 2 != 0){
+		arr.push(num)
+	}
+	
+	return oddNumbers(num -1, arr)
+
+}
 
 
 
