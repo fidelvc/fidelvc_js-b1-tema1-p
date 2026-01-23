@@ -23,6 +23,17 @@
 console.log(hypotenuse(3,4));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+function hypotenuse(base, altura){
+  function nPow(n){
+    return n * n;
+  }
+
+  //TODO: raíz cuadrada
+  function square(n){
+  }
+  return Math.sqrt((nPow(base) + nPow(altura)))
+}
+
 
 
 
