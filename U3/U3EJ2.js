@@ -61,7 +61,12 @@ console.log(currentAge(classroomStudents));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function currentAge(student){
 
+  function calculatedYears(){
+    
+  }
+}
 
 
 /**
