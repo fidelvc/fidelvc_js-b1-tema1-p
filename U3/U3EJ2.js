@@ -21,66 +21,68 @@
 //Do not modify this code:
 // Declaring and initializing the array that represents the students in the classroom.
 const classroomStudents = [
-  {
-      name: 'Carme',
-      surname: 'Ibáñez Marchena',
-      yearOfBirth: 1998,
-      averageGrade: 8.3,
-      repeater: false,
-  },
-  {
-      name: 'Joan',
-      surname: 'Espí Prats',
-      yearOfBirth: 1999,
-      averageGrade: 9.8,
-      repeater: true,
-  },
-  {
-      name: 'Maria',
-      surname: 'Massats Perelló',
-      yearOfBirth: 2003,
-      averageGrade: 4.5,
-      repeater: false,
-  },
-  {
-      name: 'Ramon',
-      surname: 'Cugat Llopis',
-      yearOfBirth: 2000,
-      averageGrade: 2.7,
-      repeater: true,
-  },
-  {
-      name: 'Anna',
-      surname: 'Bernal Valls',
-      yearOfBirth: 2002,
-      averageGrade: 3.5,
-      repeater: false,
-  }
+	{
+		name: "Carme",
+		surname: "Ibáñez Marchena",
+		yearOfBirth: 1998,
+		averageGrade: 8.3,
+		repeater: false,
+	},
+	{
+		name: "Joan",
+		surname: "Espí Prats",
+		yearOfBirth: 1999,
+		averageGrade: 9.8,
+		repeater: true,
+	},
+	{
+		name: "Maria",
+		surname: "Massats Perelló",
+		yearOfBirth: 2003,
+		averageGrade: 4.5,
+		repeater: false,
+	},
+	{
+		name: "Ramon",
+		surname: "Cugat Llopis",
+		yearOfBirth: 2000,
+		averageGrade: 2.7,
+		repeater: true,
+	},
+	{
+		name: "Anna",
+		surname: "Bernal Valls",
+		yearOfBirth: 2002,
+		averageGrade: 3.5,
+		repeater: false,
+	},
 ];
 console.log(currentAge(classroomStudents));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
-function currentAge(student){
+function currentAge(student) {
+	function calculatedYears(yearOfBirth) {
+		return 2023 - yearOfBirth;
+	}
 
-  function calculatedYears(yearOfBirth){
-    return 2023 - yearOfBirth;
-  }
-  let result = [];
+	return student.map(({ yearOfBirth }) => calculatedYears(yearOfBirth));
+
+	// return student.map((student) => 2023 - student.yearOfBirth )
+
+	/* let result = [];
   for (let i = 0; i < student.length; i++){
     result.push(calculatedYears(student[i].yearOfBirth));
   }
-  return result;
-  // student.map((student) => 2023 - student.yearOfBirth )
+  return result; */
 }
-
 
 /**
  * TEST
- * The purpose of this code is purely for TESTING PURPOSES, 
- * if you run this code outside of this environment, 
+ * The purpose of this code is purely for TESTING PURPOSES,
+ * if you run this code outside of this environment,
  * please comment or remove the following lines
  */
 export function tests() {
-  return currentAge;
+	return currentAge;
 }
