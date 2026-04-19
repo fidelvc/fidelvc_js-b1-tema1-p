@@ -61,8 +61,9 @@ const classroomStudents = [
  
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+const result = classroomStudents.map(student => student.averageGrade)
 
-
+console.log(result);
 
 /**
  * TEST
