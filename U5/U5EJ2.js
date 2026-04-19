@@ -70,7 +70,8 @@ let planets = [
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
 
-
+const result = planets.map(planet => [planet.name,planet.diameter]);
+//console.log(result);
 
 /**
  * TEST
