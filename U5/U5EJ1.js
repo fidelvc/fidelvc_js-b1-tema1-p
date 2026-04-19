@@ -61,7 +61,17 @@ const classroomStudents = [
  
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
-const result = classroomStudents.map(student => student.averageGrade)
+const result = classroomStudents.map(student => {
+  if(student.averageGrade >= 9.0){
+    return 'A';
+  }else if(student.averageGrade >= 8.0 ){
+    return 'B';
+  }else if(student.averageGrade >= 3.0) {
+    return 'C';
+  }else{
+    return 'D';
+  }
+})
 
 console.log(result);
 
